@@ -32,7 +32,7 @@ urlpatterns = [
     path('api/orders/', include('base.urls.order_urls')),
     path('api/vendors/', include('vendor.urls')),
     # re_path(r'^$', 'path.to.function'),
-    #re_path(r'^blog/', include('blog.urls')),
+    # re_path(r'^blog/', include('blog.urls')),
     
 ]
 
