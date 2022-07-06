@@ -212,16 +212,18 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')   # added  for heroku
 
 
 MEDIA_URL = '/images/'
-
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')   # added  for heroku
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'   # added  for heroku
 '''   
 # was in main bkpe project
  
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
+MEDIA_ROOT = 'static/images'
 '''
 
-MEDIA_ROOT = 'static/images'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
