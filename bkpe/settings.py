@@ -100,7 +100,7 @@ SIMPLE_JWT = {
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware", #corsheaders
     'django.middleware.security.SecurityMiddleware',
-    "whitenoise.middleware.WhiteNoiseMiddleware",  ##WhiteNoise
+    'whitenoise.middleware.WhiteNoiseMiddleware',  ##WhiteNoise
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -205,15 +205,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+
+## STATIC_URL = 'static/'  #old one
+STATIC_URL = '/static/'   # added  for heroku
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')   # added  for heroku
 
 
 
-MEDIA_URL = '/images/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')   # added  for heroku
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'   # added  for heroku
+# MEDIA_URL = '/images/'  #old one
+
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')   # added  for heroku
+
 '''   
 # was in main bkpe project
  
