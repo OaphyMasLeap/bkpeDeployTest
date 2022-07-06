@@ -24,12 +24,15 @@ urlpatterns = [
     #path('', admin.site.urls),
     path('admin/', admin.site.urls),   #'admin-dashboard/'
     # path('api/', include('base.urls')),
-    path('api/products/', include('base.urls.product_urls')),
+    # path('api/products/', include('base.urls.product_urls')),
+
+    re_path(r'^api/products/', include(''base.urls.product_urls'')),
     path('api/category-products/', include('base.urls.category_urls')),
     path('api/users/', include('base.urls.user_urls')),
     path('api/orders/', include('base.urls.order_urls')),
     path('api/vendors/', include('vendor.urls')),
-    re_path(r'^$', 'path.to.function'),
+    # re_path(r'^$', 'path.to.function'),
+    #re_path(r'^blog/', include('blog.urls')),
     
 ]
 
