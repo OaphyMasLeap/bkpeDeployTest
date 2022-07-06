@@ -207,15 +207,19 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')   # added  for heroku
 
 
 
 MEDIA_URL = '/images/'
 
+'''   
+# was in main bkpe project
+ 
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
+'''
 
 MEDIA_ROOT = 'static/images'
 
